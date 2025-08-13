@@ -25,7 +25,7 @@ jobs:
           # This writes a settings.xml that includes a <server> with id=github
           server-id: github
           server-username: GITHUB_ACTOR
-          server-password: GITHUB_TOKEN
+          server-password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build & Deploy
         run: mvn -B -DskipTests deploy
